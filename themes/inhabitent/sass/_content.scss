@@ -154,7 +154,7 @@ body:not(.home):not(.page-template-abt_example):not(.single-adventure) {
     padding-bottom: 3rem;
   }
 
-  &:not(.post-type-archive):not(.tax-product-type):not(.single-product){
+  &:not(.post-type-archive.pjp):not(.taxonomy-product_type.php):not(.single-product){
     .site-content {
       display: flex;
       margin-left: auto;
@@ -162,7 +162,7 @@ body:not(.home):not(.page-template-abt_example):not(.single-adventure) {
       width: 1120px;
     }
     .content-area {
-      border-right: 1px solid #e1e1e1;
+      border-right: 1px solid blue;
       padding-right: 5%;
       width: 73%;
     }

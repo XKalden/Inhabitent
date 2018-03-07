@@ -6,38 +6,47 @@
  */
 
 get_header(); ?>
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <div class="container">
+                <header class="page-header">
+                    <h1> shop stuff </h1> 
+                    <ul class="product-type-list"> 
+                    <?php $terms = get_terms(array('taxonomy'=>'product_type','')) ?>
+                    <?php if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
+                        <?php 
+                            foreach ( $terms as $term ){
+                            echo '<li><p><a href="'.get_term_link($term->term_taxonomy_id).'">'. $term->name . '</a><p></li>';
+                            }
+                        ?>
+                    <?php endif; ?>
+                    </ul>
+                </header>
+                <!-- .page-header -->
+            
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+                <div class="product-grid"> 
+                    <?php 
+                        $arg = array('numberposts' => 16,'post_type' => 'product', 'order' => 'DESC');
+                        $product_posts = get_posts( $arg );
+                    ?> 
+                    <?php foreach( $product_posts as $post ) : setup_postdata( $post ) ?>
+                    <?php
+                        echo '<div class="product-grid-item">';
+                            echo '<a href="'. get_post_permalink($post->id) .'"style="background:url(\''. get_the_post_thumbnail_url( $post->ID).'\')no-repeat center;background-size:cover"></a>';
+                            echo '<div class="product-info">';
+                                echo '<h2 class="entry-title">'.$post->post_title.'</h2>';
+                                echo '<span class="price">$'.CFS()->get('price').'</span>';        
+                            echo '</div>';
+                        echo '</div>';
+                    ?>                
+                    <?php endforeach?>
+                </div>
+            </div>
 
-		<?php if ( have_posts() ) : ?>
+        </main>
+        <!-- #main -->
+    </div>
+    <!-- #primary -->
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
