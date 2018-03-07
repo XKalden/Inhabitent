@@ -3,3 +3,258 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.home {
+  h2 {
+    font-size: 38.4px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 3.75rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .adventures,
+  .home-hero,
+  .latest-entries,
+  .product-info {
+    margin-bottom: 4.5rem;
+  }
+
+  .home-hero {
+    align-items: center;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.4) 0,
+        rgba(0, 0, 0, 0.4)
+      ),
+      #969696 url("../../images/home-hero.jpg") no-repeat top;
+    background-size: cover, cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      height: 275px;
+      width: 275px;
+    }
+  }
+
+  .product-type-blocks {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    img {
+      height: 70px;
+      width: 70px;
+    }
+    
+    p:last-child {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .product-type-block-wrapper {
+    border: 1px solid #e1e1e1;
+    border-top-width: 5px;
+    flex: 0 1 23.5%;
+    max-width: 23.5%;
+    padding: 0.75rem;
+
+    &:hover {
+      border-color: #d99054;
+    }
+  }
+
+  .latest-entries ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      border: 1px solid #e1e1e1;
+      flex: 0 1 32%;
+      position: relative;
+
+      .thumbnail-wrapper {
+        background-color: #e1e1e1;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+
+        .wp-post-image {
+          left: 50%;
+          max-height: 250px;
+          max-width: none;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -52%);
+          width: auto;
+        }
+      }
+
+      .post-info-wrapper {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.75rem;
+
+        .entry-meta {
+          font-size: 12px;
+          font-size: 0.75rem;
+        }
+
+        h3 {
+          font-size: 20.8px;
+          font-size: 1.3rem;
+          margin-bottom: 3.75rem;
+        }
+      }
+      .black-btn {
+        position: absolute;
+        bottom: 0.75rem;
+        left: 0.75rem;
+      }
+    }
+  }
+
+  .adventures {
+    margin-bottom: 4.5rem;
+
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+
+      li {
+        float: left;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          content: "";
+          float: left;
+        }
+
+        &:first-child {
+          border-right: 20px solid #fff;
+          width: 50%;
+
+          &:before {
+            padding-top: 100%;
+          }
+
+          .story-info h3 {
+            font-size: 48px;
+            font-size: 3rem;
+          }
+        }
+
+        &:nth-child(2) {
+          border-bottom: 20px solid #fff;
+          width: 50%;
+
+          &:before {
+            padding-top: calc(50% - 30px);
+          }
+
+          .story-info h3 {
+            font-size: 38.4px;
+            font-size: 2.4rem;
+          }
+        }
+
+        &:nth-child(3),
+        &:last-child {
+          width: 25%;
+
+          &:before {
+            padding-top: 100%;
+          }
+
+          .story-info h3 {
+            font-size: 25.6px;
+            font-size: 1.6rem;
+          }
+        }
+
+        &:nth-child(3) {
+          border-right: 10px solid #fff;
+        }
+
+        &:last-child {
+          border-left: 10px solid #fff;
+        }
+
+        .story-wrapper {
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 1;
+
+          &:after {
+            background: rgba(0, 0, 0, 0.35);
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+          }
+
+          .story-info {
+            margin: 1.5rem;
+            position: absolute;
+            z-index: 2;
+
+            h3 {
+              font-weight: 400;
+              margin-top: 24px;
+              text-transform: none;
+
+              a {
+                color: #fff;
+
+                &:hover {
+                  color: #f0e4d1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .see-more {
+      margin-top: 2.25rem;
+
+      .btn {
+        font-size: 19.2px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.page-template-abt_example {
+  .entry-title {
+    font-size: 48px;
+    font-size: 3rem;
+  }
+  .entry-content {
+    margin: 3rem auto;
+    max-width: 800px;
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

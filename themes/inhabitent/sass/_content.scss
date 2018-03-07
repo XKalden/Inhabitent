@@ -4,46 +4,381 @@
 
 /* Posts and pages */
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site {
+  flex: 1 0 auto;
+}
+
+.site-content {
+  padding-top: 50px;
+}
+
+.home .site-content,
+.page-template-about .site-content,
+.single-adventure .site-content {
+  padding-top: 0;
+}
+
+.single-product article {
+  display: flex;
+  justify-content: space-between;
+  .site-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1120px;
+  }
+  .product-content-wrapper,
+  .product-image-wrapper {
+    width: 48%;
+  }
+
+  .entry-title {
+    color: #d99054;
+  }
+
+  .entry-content {
+    margin-top: 0;
+    .price {
+      font-family: Novecentosanswide-Normal;
+      font-size: 1.8rem;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.post-type-archive-adventure .page-header {
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.adventure-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 4.5rem;
+  .adventure-grid-item {
+    flex: 0 1 49%;
+    margin-bottom: 1.5rem;
+    max-width: 49%;
+    position: relative;
+    &::before {
+      content: "";
+      float: left;
+      padding-top: 100%;
+    }
+    .story-wrapper {
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      &:after {
+        background: rgba(0, 0, 0, 0.35);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+      .story-info {
+        margin: 4.5rem 1.5rem;
+        position: absolute;
+        z-index: 2;
+        h2 {
+          font-family: merriweatherlight;
+          font-size: 3rem;
+          font-weight: 400;
+          margin-bottom: 4.5rem;
+          text-transform: none;
+          a {
+            color: #fff;
+            &:hover {
+              color: #f0e4d1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.single-adventure {
+  .entry-content,
+  .entry-footer,
+  .entry-meta,
+  .entry-title {
+    max-width: 800px;
+  }
+  .entry-title {
+    margin-top: 3rem;
+  }
+  .entry-meta {
+    font-family: Novecento-Normal;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  .entry-content {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.post-type-archive-product .page-header,
+.tax-product_type .page-header {
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.single-product .site-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px;
+}
+
+body:not(.home):not(.page-template-abt_example):not(.single-adventure) {
+  .content-area,
+  .widget-area {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &:not(.post-type-archive):not(.tax-product-type):not(.single-product){
+    .site-content {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 1120px;
+    }
+    .content-area {
+      border-right: 1px solid #e1e1e1;
+      padding-right: 5%;
+      width: 73%;
+    }
+    .widget-area {
+      padding-left: 5%;
+      width: 27%;
+      .block-item {
+        p,
+        p a {
+          color: #000000;
+        }
+        .social {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+  margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+  display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
+}
+
+.entry-title,
+.page-title {
+  margin-top: 0;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+  margin: $base__space-unit_2 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+  clear: both;
+  margin: 0 0 $base__space-unit;
 }
+
+/* Archives */
+.archive:not(.tax-product-type):not(.post-type-archive),
+.blog,
+.single-journal {
+  .entry-header {
+    line-height: 0;
+    position: relative;
+
+    h1,
+    h2 {
+      background-color: #248a83;
+      color: #fff;
+      font-size: 33.6px;
+      font-size: 2.1rem;
+      left: 0;
+      padding: 0.75rem 1.5rem;
+      position: absolute;
+      margin-top: 2.25rem;
+      max-width: 75%;
+      top: 0;
+    }
+
+    .entry-meta {
+      background-color: #248a83;
+      bottom: 0;
+      color: #fff;
+      display: inline-block;
+      font-family: Novecento Sans Web, sans-serif;
+      padding: 1.00005rem 1.5rem;
+      position: absolute;
+      right: 0;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #fff;
+      &:hover {
+        color: #f0e4d1;
+      }
+    }
+  }
+}
+
+.cat-links,
+.tags-links {
+  display: inline-block;
+  font-family: Novecento-Normal;
+  text-transform: uppercase;
+}
+
+.cat-links {
+  margin-right: 1.5rem;
+}
+
+.archive:not(.post-type-archive):not(.tax-product-type),
+.search  {
+  .page-header{
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+  }
+  .entry-meta {
+    font-family: Novecento-Normal;
+    text-transform: uppercase
+}
+    
+}
+
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+  display: none;
 }
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 .bypostauthor {
-	display: block;
+  display: block;
+}
+
+.comment-list {
+  margin-left: 0;
+  padding-left: 0;
+  & > li {
+    border-bottom: 1px solid #e1e1e1;
+  }
+}
+
+.children li {
+  border-top: 1px solid #e1e1e1;
+}
+
+.comment {
+  padding-top: 1.5rem;
+  article {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.comment-body {
+  display: flex;
+  p {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.comment-author-avatar {
+  border-radius: 50%;
+  height: 64px;
+  margin-right: 1.5rem;
+  overflow: hidden;
+  width: 64px;
+}
+
+.comment-author cite {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.comment-metadata {
+  color: gray;
+  margin-bottom: 0.75rem;
+}
+
+.required {
+  color: #d99054;
+}
+
+.comment-form-author,
+.comment-form-email {
+  float: left;
+  input {
+    width: 100%;
+  }
+}
+
+.comment-form-author {
+  margin-right: 1%;
+  width: 49%;
+}
+
+.comment-form-email {
+  margin-left: 1%;
+  width: 49%;
+}
+
+.comment-form-url {
+  clear: left;
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}
+
+.comment-reply-title {
+  margin-top: 1.5rem;
+}
+
+#cancel-comment-reply-link:hover {
+  text-decoration: none;
 }

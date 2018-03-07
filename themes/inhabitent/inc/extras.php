@@ -21,25 +21,35 @@ function red_starter_body_classes( $classes ) {
 }
 
 
-// to add Custome logo
 function my_custom_login_logo() {
-	echo '<style type="text/css">                                                                   
-		h1 a { background-image:url('.get_template_directory_uri().'/assets/logoo.svg) !important; 
-			background-size:300px 53px !important; width:300px !important; }              
-	</style>';
+    echo '<style>
+        #login h1 a {
+            background: url(' . get_template_directory_uri() . '/images/logos/inhabitent-logo-text-dark.svg) no-repeat !important;
+            background-size: 300px 53px !important; width: 300px !important; height: 53px !important;
+        }
+        #login .button.button-primary {
+            background-color: #248A83;
+        }
+    </style>';
 }
+
+// to add Custome logo
+
+
 add_action('login_head', 'my_custom_login_logo');
 
 // Logo Click return to home page
 function my_login_logo_url() {
     return home_url();
 }
+
 add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 
 function my_login_logo_url_title() {
     return 'Inhabitent';
 }
+
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
 // Custome  message

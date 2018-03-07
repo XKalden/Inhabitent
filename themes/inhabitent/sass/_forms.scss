@@ -4,31 +4,78 @@
 
 /* Buttons */
 
+.black-btn,
+.btn,
+.white-btn,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	@include font-size(0.75);
-	line-height: 1;
-	padding: .6rem 1rem .4rem;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: #248a83;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: Novecento Sans Web, sans-serif;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:active,
+  &:focus,
+  &:hover {
+    background: #19625d;
+    color: #fff;
+  }
+}
 
-	&:hover {
-		border-color: #ccc #bbb #aaa;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-	}
+.black-btn {
+  border: 1px solid #000;
+  color: #000;
+}
 
-	&:active,
-	&:focus {
-		border-color: #aaa #bbb #bbb;
-		box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-	}
+.white-btn {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.black-btn,
+.white-btn {
+  background-color: transparent;
+}
+
+label {
+  color: #2f1339;
+  display: block;
+  font-family: Novecento-Normal;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+}
+
+.social {
+  margin: 1.5rem 0;
+  & a:before {
+    margin-right: 10px;
+  }
+
+  #fb:before {
+    content: "\f09a";
+    font-family: FontAwesome;
+  }
+
+  #twitter:before {
+    content: "\f099";
+    font-family: FontAwesome;
+  }
+
+  #pinterest:before {
+    content: "\f0d2";
+    font-family: FontAwesome;
+  }
 }
 
 /* Fields */
@@ -39,13 +86,14 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+  color: #666;
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 0;
 
-	&:focus {
-		color: #111;
-	}
+  &:focus {
+    color: #111;
+  }
 }
 
 input[type="text"],
@@ -53,10 +101,10 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+  padding: 3px;
 }
 
 textarea {
-	padding-left: 3px;
-	width: 100%;
+  padding-left: 0.3rem;
+  width: 100%;
 }

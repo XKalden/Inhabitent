@@ -17,12 +17,39 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: Novecentosanswide-Normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 38.4px;
+    font-size: 2.4rem;
+    margin-bottom: .5rem
+}
+
+h1,
+h2 {
+    line-height: 1.25
+}
+
+h2 {
+    color: #2f1339;
+    font-size: 33.6px;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem
+}
+
+h3 {
+    font-size: 28.8px;
+    font-size: 1.8rem;
+    line-height: 1.25
 }
 
 /* Copy */
 
 p {
-	margin-bottom: $base__space-unit;
+	margin-bottom: $base__space-unit_2;
 }
 
 dfn, cite, em, i {

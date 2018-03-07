@@ -10,8 +10,23 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
+				<div class="footer-block container">
+					
+	
+					<?php dynamic_sidebar( 'sidebar-footer' ); ?>
+
+					<div class="block-item"> 
+						<a href=<?php echo '"'.get_home_url() .'"';?> rel="home"> 
+							<img src=" <?php echo  get_template_directory_uri().'/images/logos/inhabitent-logo-text.svg'?>"/>
+						</a>
+					</div>
+
+				</div> 
 				<div class="site-info">
-					<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>
+					<div class="container"> 
+					COPYRIGHT © 2016 INHABITENT
+					</div> 
+					
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
