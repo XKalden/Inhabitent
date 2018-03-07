@@ -873,7 +873,7 @@ body:not(.home):not(.page-template-abt_example):not(.single-adventure) .widget-a
   padding-top: 3rem;
   padding-bottom: 3rem; }
 
-body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive.pjp):not(.taxonomy-product_type.php):not(.single-product) .site-content {
+body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive):not(.tax-product-type):not(.single-product) .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -881,18 +881,18 @@ body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post
   margin-right: auto;
   width: 1120px; }
 
-body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive.pjp):not(.taxonomy-product_type.php):not(.single-product) .content-area {
-  border-right: 1px solid blue;
+body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive):not(.tax-product-type):not(.single-product) .content-area {
+  border-right: 1px solid #e1e1e1;
   padding-right: 5%;
   width: 73%; }
 
-body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive.pjp):not(.taxonomy-product_type.php):not(.single-product) .widget-area {
+body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive):not(.tax-product-type):not(.single-product) .widget-area {
   padding-left: 5%;
   width: 27%; }
-  body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive.pjp):not(.taxonomy-product_type.php):not(.single-product) .widget-area .block-item p,
-  body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive.pjp):not(.taxonomy-product_type.php):not(.single-product) .widget-area .block-item p a {
+  body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive):not(.tax-product-type):not(.single-product) .widget-area .block-item p,
+  body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive):not(.tax-product-type):not(.single-product) .widget-area .block-item p a {
     color: #000000; }
-  body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive.pjp):not(.taxonomy-product_type.php):not(.single-product) .widget-area .block-item .social {
+  body:not(.home):not(.page-template-abt_example):not(.single-adventure):not(.post-type-archive):not(.tax-product-type):not(.single-product) .widget-area .block-item .social {
     display: none; }
 
 .sticky {
